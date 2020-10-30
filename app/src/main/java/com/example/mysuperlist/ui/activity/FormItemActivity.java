@@ -16,6 +16,7 @@ public class FormItemActivity extends AppCompatActivity {
 
     private EditText editNomeProduto;
     private EditText editQuantidadeProduto;
+    private EditText editValorProduto;
     private Button buttonAdicionaProduto;
     private Boolean eFormularioEdicao = false;
     private Item item;
@@ -39,6 +40,7 @@ public class FormItemActivity extends AppCompatActivity {
     private void carregaDadosFormulario(){
         editNomeProduto.setText(item.getNomeDoItem());
         editQuantidadeProduto.setText(item.getQuantidadeDoItemTexto());
+        editValorProduto.setText(item.getValorDoItemTexto());
     }
 
     private void cliqueBotao(){
@@ -68,20 +70,24 @@ public class FormItemActivity extends AppCompatActivity {
     private void atualizaItem(){
         String nomeItem = editNomeProduto.getText().toString();
         int quantidadeItem = Integer.valueOf(editQuantidadeProduto.getText().toString());
+        double valorItem = Double.parseDouble(editValorProduto.getText().toString());
 
         item.setNomeDoItem(nomeItem);
         item.setQuantidadeDoItem(quantidadeItem);
+        item.setValorDoItem(valorItem);
     }
 
     private Item pegaItemDoFormulario(){
         String nomeItem = editNomeProduto.getText().toString();
         int quantidadeItem = Integer.valueOf(editQuantidadeProduto.getText().toString());
+        double valorItem = Double.parseDouble(editValorProduto.getText().toString());
 
-        return new Item(nomeItem, quantidadeItem);
+        return new Item(nomeItem, quantidadeItem, valorItem);
     }
 
     private void carregaCampos(){
         editNomeProduto = findViewById(R.id.editTextNomeProduto);
         editQuantidadeProduto = findViewById(R.id.editTextQuantidadeProduto);
+        editValorProduto = findViewById(R.id.editTextValorProduto);
     }
 }

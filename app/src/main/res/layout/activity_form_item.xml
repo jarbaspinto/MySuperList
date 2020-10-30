@@ -14,11 +14,12 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Nome do produto"
+        android:hint="@string/edit_text_nome_hint"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editTextQuantidadeProduto"
@@ -26,19 +27,34 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Quantidade"
+        android:hint="@string/edit_text_quantidade_hint"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/editTextNomeProduto"
         app:layout_constraintStart_toStartOf="@+id/editTextNomeProduto"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeProduto" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNomeProduto"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextValorProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/edit_text_valor_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNomeProduto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextNomeProduto"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuantidadeProduto" />
 
     <Button
         android:id="@+id/buttonAdicionaProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Adicionar\nProduto"
+        android:text="@string/button_adiciona_produto"
         app:layout_constraintEnd_toEndOf="@+id/editTextQuantidadeProduto"
         app:layout_constraintStart_toStartOf="@+id/editTextQuantidadeProduto"
-        app:layout_constraintTop_toBottomOf="@+id/editTextQuantidadeProduto" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextValorProduto" />
 </androidx.constraintlayout.widget.ConstraintLayout>

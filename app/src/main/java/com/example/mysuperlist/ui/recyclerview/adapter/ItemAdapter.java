@@ -68,16 +68,19 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView textItemNome;
         private TextView textQuantidade;
+        private TextView textValor;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             textItemNome = itemView.findViewById(R.id.itemNome);
             textQuantidade = itemView.findViewById(R.id.itemQuantidade);
+            textValor = itemView.findViewById(R.id.itemValor);
         }
         private void vincula(Item item){
             textItemNome.setText(item.getNomeDoItem());
             textQuantidade.setText(item.getQuantidadeDoItemTexto());
+            textValor.setText(item.getValorDoItemTexto());
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

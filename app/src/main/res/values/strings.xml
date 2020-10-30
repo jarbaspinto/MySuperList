@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">My SuperList</string>
+    Strings activity_main.xml
+    <string name="valor_total">Total: </string>
+    Strings item_lista.xml
+        <string name="item_nome_hint">Item</string>
+        <string name="item_quantidade_hint">Quantidade</string>
+        <string name="item_valor_hint">Valor</string>
+
+    Strings activity_form_item.xml
+        <string name="edit_text_nome_hint">Nome do produto</string>
+        <string name="edit_text_quantidade_hint">Quantidade</string>
+        <string name="edit_text_valor_hint">Valor</string>
+        <string name="button_adiciona_produto">Adicionar Produto</string>
 </resources>

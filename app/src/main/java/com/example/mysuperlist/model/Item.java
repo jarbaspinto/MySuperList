@@ -14,10 +14,13 @@ public class Item implements Serializable {
     private String nomeDoItem;
     @ColumnInfo(name = "Quantidade")
     private int quantidadeDoItem;
+    @ColumnInfo(name= "Valor")
+    private double valorDoItem;
 
-    public Item(String nomeDoItem, int quantidadeDoItem) {
+    public Item(String nomeDoItem, int quantidadeDoItem, double valorDoItem) {
         this.nomeDoItem = nomeDoItem;
         this.quantidadeDoItem = quantidadeDoItem;
+        this.valorDoItem = valorDoItem;
     }
 
     public int getId() {
@@ -45,5 +48,16 @@ public class Item implements Serializable {
 
     public void setQuantidadeDoItem(int quantidadeDoItem) {
         this.quantidadeDoItem = quantidadeDoItem;
+    }
+
+    public double getValorDoItem() {
+        return valorDoItem;
+    }
+    public String getValorDoItemTexto(){
+        return String.valueOf(valorDoItem);
+    }
+
+    public void setValorDoItem(double valorDoItem) {
+        this.valorDoItem = valorDoItem;
     }
 }
