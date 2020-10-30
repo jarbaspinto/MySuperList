@@ -17,7 +17,7 @@ public class FormItemActivity extends AppCompatActivity {
     private EditText editNomeProduto;
     private EditText editQuantidadeProduto;
     private Button buttonAdicionaProduto;
-    private Boolean eFormularioEdicao;
+    private Boolean eFormularioEdicao = false;
     private Item item;
 
     @Override
@@ -38,7 +38,7 @@ public class FormItemActivity extends AppCompatActivity {
 
     private void carregaDadosFormulario(){
         editNomeProduto.setText(item.getNomeDoItem());
-        editQuantidadeProduto.setText(item.getQuantidadeDoItem());
+        editQuantidadeProduto.setText(item.getQuantidadeDoItemTexto());
     }
 
     private void cliqueBotao(){

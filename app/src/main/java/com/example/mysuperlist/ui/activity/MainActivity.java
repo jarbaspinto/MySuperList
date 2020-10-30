@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ItemAdapter(getApplicationContext(), itens);
         recyclerViewMainItens.setAdapter(adapter);
-        adapter.setOnClickListener(new ItemItemClickListener() {
+        adapter.setOnItemClickListener(new ItemItemClickListener() {
             @Override
             public void itemClick(Item item, int posicao) {
                 posicaoItemClick = posicao;

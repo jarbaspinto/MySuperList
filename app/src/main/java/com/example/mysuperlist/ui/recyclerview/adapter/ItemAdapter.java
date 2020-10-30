@@ -21,15 +21,15 @@ import java.util.List;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     private Context context;
     private List<Item> itens;
-    private ItemItemClickListener onClickListener;
+    private ItemItemClickListener onItemClickListener;
 
     public ItemAdapter(Context context, List<Item> itens) {
         this.context = context;
         this.itens = itens;
     }
 
-    public void setOnClickListener(ItemItemClickListener onClickListener) {
-        this.onClickListener = onClickListener;
+    public void setOnItemClickListener(ItemItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -77,14 +77,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         }
         private void vincula(Item item){
             textItemNome.setText(item.getNomeDoItem());
-            textQuantidade.setText(item.getQuantidadeDoItem());
+            textQuantidade.setText(item.getQuantidadeDoItemTexto());
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int posicao = getAdapterPosition();
                     Item item = itens.get(getAdapterPosition());
-                    onClickListener.itemClick(item, posicao);
+                    onItemClickListener.itemClick(item, posicao);
                 }
             });
         }

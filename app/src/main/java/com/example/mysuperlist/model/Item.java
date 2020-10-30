@@ -39,6 +39,9 @@ public class Item implements Serializable {
     public int getQuantidadeDoItem() {
         return quantidadeDoItem;
     }
+    public String getQuantidadeDoItemTexto(){
+        return String.valueOf(quantidadeDoItem);
+    }
 
     public void setQuantidadeDoItem(int quantidadeDoItem) {
         this.quantidadeDoItem = quantidadeDoItem;
